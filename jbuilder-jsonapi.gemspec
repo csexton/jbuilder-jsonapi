@@ -6,11 +6,11 @@ require 'jbuilder/jsonapi/version'
 Gem::Specification.new do |spec|
   spec.name          = "jbuilder-jsonapi"
   spec.version       = Jbuilder::Jsonapi::VERSION
-  spec.authors       = ["Christopher Sexton"]
-  spec.email         = ["github@codeography.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.authors       = ["Christopher Sexton", "Guille Carlos"]
+  spec.email         = ["github@codeography.com", "guille@bitpop.in"]
+  spec.description   = "jBuilder extensions and helpers for JSON API"
+  spec.summary       = "jBuilder extensions and helpers for building JSON API documents. See http://jsonapi.org for details on the format"
+  spec.homepage      = "https://github.com/csexton/jbuilder-jsonapi"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency 'jbuilder', '~> 2.0.0'
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end
