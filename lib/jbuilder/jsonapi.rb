@@ -1,7 +1,3 @@
+require "jbuilder"
 require "jbuilder/jsonapi/version"
-
-module Jbuilder
-  module Jsonapi
-    # Your code goes here...
-  end
-end
+require "jbuilder/jsonapi/links"
