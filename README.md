@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/csexton/jbuilder-jsonapi.png)](https://travis-ci.org/csexton/jbuilder-jsonapi)
+
 # Jbuilder::Jsonapi
 
 TODO: Write a gem description
