@@ -19,6 +19,6 @@ describe "Jbuilder#links" do
       end
     end
 
-    assert_equal json, "{\"links\":{\"comments\":[1],\"user\":1,\"tags\":[1]}}"
+    assert_equal json, "{\"links\":{\"comments\":[\"1\"],\"user\":\"1\",\"tags\":[\"1\"]}}"
   end
 end
