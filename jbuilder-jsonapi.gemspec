@@ -5,7 +5,7 @@ require 'jbuilder/jsonapi/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "jbuilder-jsonapi"
-  spec.version       = Jbuilder::Jsonapi::VERSION
+  spec.version       = "0.0.1" 
   spec.authors       = ["Christopher Sexton", "Guille Carlos"]
   spec.email         = ["github@codeography.com", "guille@bitpop.in"]
   spec.description   = "jBuilder extensions and helpers for JSON API"

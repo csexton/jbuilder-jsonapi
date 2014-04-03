@@ -1,6 +1,38 @@
 require_relative '../../test_helper.rb'
+class Comment
+  def id
+    1 
+  end
+end
+
+class User
+  def id
+    1
+  end
+end
+
+class Tags
+  def id
+    1
+  end
+end
+
+class Post
+  def comments
+    [Comment.new]
+  end
+
+  def user
+    User.new 
+  end
+
+  def tags
+    [Tags.new]
+  end
+end
 
 describe "Jbuilder#links" do
+  let(:post) { Post.new }
 
   it "renders the list of ids" do
     json = Jbuilder.encode do |json|
@@ -8,13 +40,7 @@ describe "Jbuilder#links" do
         json.links! post, :comments, :user, :tags
       end
     end
-    assert json # is something like:
-      # The output should be something like this
-      #     {
-      #       "links": {
-      #         "comments": [1,2,3,4,5],
-      #         "user": 2,
-      #         "tags": [30,31,32,33]
-      #     }
+
+    assert_equal json, "{\"links\":{\"comments\":[1],\"user\":1,\"tags\":[1]}}"
   end
 end
