@@ -1,38 +1,16 @@
 require_relative '../../test_helper.rb'
-class Comment
-  def id
-    1 
-  end
-end
-
-class User
-  def id
-    1
-  end
-end
-
-class Tags
-  def id
-    1
-  end
-end
-
-class Post
-  def comments
-    [Comment.new]
-  end
-
-  def user
-    User.new 
-  end
-
-  def tags
-    [Tags.new]
-  end
-end
 
 describe "Jbuilder#links" do
-  let(:post) { Post.new }
+  def double(opts)
+    OpenStruct.new(opts)
+  end
+
+  let(:post) {
+    comments = [double(id:1)]
+    user = double(id:1)
+    tags = [double(id:1)]
+    OpenStruct.new(comments:comments, user:user, tags:tags)
+  }
 
   it "renders the list of ids" do
     json = Jbuilder.encode do |json|
