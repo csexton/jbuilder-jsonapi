@@ -12,7 +12,7 @@ This library will extend Jbuilder and add a few methods to the `json` object in 
 
 The value of the "links" key is a JSON object that represents related resources.
 
-```json
+```ruby
 json.links do
   json.links! post, :comments, :user
 end
